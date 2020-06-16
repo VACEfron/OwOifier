@@ -31,9 +31,8 @@ namespace OwOifier
                 };
 
                 Text = Regex.Replace(Text, "!", $" {faces[r.Next(faces.Length)]} ");
-            }
 
-            Text = Text
+                Text = Text
                 .Replace("nyzzwes", "nuzzles~")
                 .Replace("ahh", "murr")
                 .Replace("awesome", "pawsome")
@@ -88,7 +87,8 @@ namespace OwOifier
                 .Replace(":D", "UwU")
                 .Replace("XD", "X3")
                 .Replace("xD", "x3")
-                ;
+                .Replace("?", " uwu?");
+            }            
             return Text;
         }
     }
