@@ -37,7 +37,6 @@ namespace OwOifier
                 .Replace("ahh", "murr")
                 .Replace("awesome", "pawsome")
                 .Replace("awfuw", "pawful")
-                .Replace("bite", "nuzzles~")
                 .Replace("bite", "nom")
                 .Replace("buwge", "bulgy-wulgy")
                 .Replace("butthowe", "tailhole")
