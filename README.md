@@ -11,7 +11,7 @@
 ```csharp
 string text = OwOifier.OwOify("This text is now OwOified!", OwOmode.High);
 
-Console.WriteLine(text);
+Console.WriteLine(text); // Output: This text is nyow OwOified o(>ω<)o
 ```
 
 
