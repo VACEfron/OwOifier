@@ -5,22 +5,22 @@ namespace OwOifier
 {
     public static class OwOifier
     {
-        public static string OwOify(string Text, OwOMode OwOMode = OwOMode.High)
+        public static string OwOify(string text, OwOMode OwOMode = OwOMode.High)
         {
-            Text = Regex.Replace(Text, @"(?:R|L)", "W");
-            Text = Regex.Replace(Text, @"(?:r|l)", "w");
+            text = Regex.Replace(text, @"(?:R|L)", "W");
+            text = Regex.Replace(text, @"(?:r|l)", "w");
 
             if (OwOMode == OwOMode.Medium || OwOMode == OwOMode.High)
             {
-                Text = Regex.Replace(Text, @"n([aeiou])", "ny$1");
-                Text = Regex.Replace(Text, @"N([aeiou])", "Ny$1");
-                Text = Regex.Replace(Text, @"N([AEIOU])", "NY$1");
-                Text = Regex.Replace(Text, @"z ", "z~ ");
+                text = Regex.Replace(text, @"n([aeiou])", "ny$1");
+                text = Regex.Replace(text, @"N([aeiou])", "Ny$1");
+                text = Regex.Replace(text, @"N([AEIOU])", "NY$1");
+                text = Regex.Replace(text, @"z ", "z~ ");
             }
             if (OwOMode == OwOMode.High)
             {
-                Text = Regex.Replace(Text, @"OVE", "UV");
-                Text = Regex.Replace(Text, @"ove", "uv");
+                text = Regex.Replace(text, @"OVE", "UV");
+                text = Regex.Replace(text, @"ove", "uv");
 
                 var r = new Random();
                 string[] faces = {
@@ -28,9 +28,9 @@ namespace OwOifier
                     "(´• ω •`)","o(>ω<)o","(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧", "(⁀ᗢ⁀)", "(￣ε￣＠)", "( 〃▽〃)", "(o^ ^o)", "ヾ(*'▽'*)"
                 };
 
-                Text = Regex.Replace(Text, "!", $" {faces[r.Next(faces.Length)]} ");
+                text = Regex.Replace(text, "!", $" {faces[r.Next(faces.Length)]} ");
 
-                Text = Text
+                text = text
                 .Replace("nyzzwes", "nuzzles~")
                 .Replace("ahh", "murr")
                 .Replace("awesome", "pawsome")
@@ -88,7 +88,7 @@ namespace OwOifier
                 .Replace("?", " uwu?");
             }            
 
-            return Text;
+            return text;
         }
     }
 
