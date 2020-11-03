@@ -7,11 +7,9 @@ namespace OwOifier
     {
         public static string OwOify(string Text, OwOMode OwOMode = OwOMode.High)
         {
-            if (OwOMode == OwOMode.Low || OwOMode == OwOMode.Medium || OwOMode == OwOMode.High)
-            {
-                Text = Regex.Replace(Text, @"(?:R|L)", "W");
-                Text = Regex.Replace(Text, @"(?:r|l)", "w");
-            }
+            Text = Regex.Replace(Text, @"(?:R|L)", "W");
+            Text = Regex.Replace(Text, @"(?:r|l)", "w");
+
             if (OwOMode == OwOMode.Medium || OwOMode == OwOMode.High)
             {
                 Text = Regex.Replace(Text, @"n([aeiou])", "ny$1");
@@ -37,6 +35,7 @@ namespace OwOifier
                 .Replace("ahh", "murr")
                 .Replace("awesome", "pawsome")
                 .Replace("awfuw", "pawful")
+                .Replace("bite", "nuzzles~")
                 .Replace("bite", "nom")
                 .Replace("buwge", "bulgy-wulgy")
                 .Replace("butthowe", "tailhole")
@@ -88,6 +87,7 @@ namespace OwOifier
                 .Replace("xD", "x3")
                 .Replace("?", " uwu?");
             }            
+
             return Text;
         }
     }
